@@ -121,6 +121,7 @@ def process(raw_data):
         try:
             task = raw_data.replace("" if date is None else date["text"], "")
             task = task.split(" ", 1)[1] if command != "conversar" else task
+            task = task.strip()
         except Exception:
             pass
 
