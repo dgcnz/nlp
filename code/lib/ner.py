@@ -89,7 +89,7 @@ def syntax_analyze(sent: str) -> Tuple[List, str]:
                 if conjugate(
                         str(s), PRESENT, 2, SG,
                         mood=IMPERATIVE) == str(s).lower():
-                    command = str(s).lower()
+                    command = str(s.lemma)
     if command is None:
         command = "conversar"
     return parsed_list, command
